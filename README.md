@@ -21,13 +21,19 @@ After downloading the code, go ahead and un-tar it
 ```cd kafka_2.12-2.5.0```
 
 Start a single instance of ZooKeeper that comes as a convenience script with Kafka by running the following  
-```bin/zookeeper-server-start.sh config/zookeeper.properties```
+```sh
+bin/zookeeper-server-start.sh config/zookeeper.properties
+```
 
 In a new terminal, start the Kafka server by running:  
-```bin/kafka-server-start.sh config/server.properties```
+```sh
+bin/kafka-server-start.sh config/server.properties
+```
 
 In a new terminal, create a topic. The topic used in the code is ```redditStream```, name it according to your convenience  
-```bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic <topic-name>```
+```sh
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic <topic-name>
+```
 
 
 ## Python dependencies
